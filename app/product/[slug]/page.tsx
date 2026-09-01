@@ -193,8 +193,11 @@ export default function ProductPage() {
                 <span className="font-label-caps text-label-caps text-on-surface-variant">
                   SIZE
                 </span>
-                <button className="text-xs text-on-surface-variant hover:text-primary underline decoration-outline-variant underline-offset-4 transition-colors">
-                  Find My Fit
+                <button
+                  onClick={() => openDrawer("sizeGuide")}
+                  className="text-xs text-on-surface-variant hover:text-primary underline decoration-outline-variant underline-offset-4 transition-colors"
+                >
+                  Size Guide
                 </button>
               </div>
               <SizeSelector
