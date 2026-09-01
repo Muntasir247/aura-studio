@@ -1,26 +1,212 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─── AURA STUDIO Design Tokens (Tailwind v4 CSS-first) ─── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Surface Palette ── */
+  --color-surface: #faf9f7;
+  --color-surface-dim: #dadad8;
+  --color-surface-bright: #faf9f7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f3f1;
+  --color-surface-container: #efeeec;
+  --color-surface-container-high: #e9e8e6;
+  --color-surface-container-highest: #e3e2e0;
+  --color-surface-variant: #e3e2e0;
+  --color-surface-tint: #5e5e61;
+
+  /* ── Primary (Obsidian) ── */
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1b1c1e;
+  --color-on-primary-container: #848386;
+  --color-primary-fixed: #e3e2e4;
+  --color-primary-fixed-dim: #c7c6c9;
+  --color-on-primary-fixed: #1b1c1e;
+  --color-on-primary-fixed-variant: #464749;
+  --color-inverse-primary: #c7c6c9;
+
+  /* ── Secondary (Electric Ochre) ── */
+  --color-secondary: #735c00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fed65b;
+  --color-on-secondary-container: #745c00;
+  --color-secondary-fixed: #ffe088;
+  --color-secondary-fixed-dim: #e9c349;
+  --color-on-secondary-fixed: #241a00;
+  --color-on-secondary-fixed-variant: #574500;
+
+  /* ── Tertiary (Terracotta) ── */
+  --color-tertiary: #000000;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #410100;
+  --color-on-tertiary-container: #de5845;
+  --color-tertiary-fixed: #ffdad4;
+  --color-tertiary-fixed-dim: #ffb4a8;
+  --color-on-tertiary-fixed: #410100;
+  --color-on-tertiary-fixed-variant: #8a1c10;
+
+  /* ── Error ── */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* ── Outline / Text ── */
+  --color-outline: #76777b;
+  --color-outline-variant: #c6c6ca;
+  --color-on-surface: #1a1c1b;
+  --color-on-surface-variant: #45474a;
+  --color-on-background: #1a1c1b;
+  --color-background: #faf9f7;
+
+  /* ── Inverse ── */
+  --color-inverse-surface: #2f3130;
+  --color-inverse-on-surface: #f1f1ef;
+
+  /* ── Brand Aliases ── */
+  --color-obsidian: #000000;
+  --color-alabaster: #faf9f7;
+  --color-ochre: #d4af37;
+  --color-terracotta-accent: #de5845;
+  --color-warm-slate: #76777b;
+  --color-card-neutral: #efeeec;
+  --color-border-card: #e2dfd9;
+
+  /* ── Typography ── */
+  --font-display-lg: var(--font-playfair);
+  --font-display-lg-mobile: var(--font-playfair);
+  --font-headline-md: var(--font-playfair);
+  --font-headline-sm: var(--font-playfair);
+  --font-body-lg: var(--font-jakarta);
+  --font-body-md: var(--font-jakarta);
+  --font-label-caps: var(--font-jakarta);
+  --font-button: var(--font-jakarta);
+  --font-sans: var(--font-jakarta);
+  --font-serif: var(--font-playfair);
+
+  /* ── Font Sizes ── */
+  --text-display-lg: 64px;
+  --text-display-lg-mobile: 40px;
+  --text-headline-md: 32px;
+  --text-headline-sm: 24px;
+  --text-body-lg: 18px;
+  --text-body-md: 16px;
+  --text-label-caps: 12px;
+  --text-button: 14px;
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.125rem;
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* ── Spacing ── */
+  --spacing-gutter: 24px;
+  --spacing-unit: 4px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-section-gap: 120px;
+
+  /* ── Container ── */
+  --max-w-container-max: 1440px;
+
+  /* ── Shadows ── */
+  --shadow-ambient: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+
+  /* ── Animations ── */
+  --animate-slide-in-right: slide-in-right 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-fade-in: fade-in 0.3s ease-out forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─── Base Styles ─── */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-jakarta), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-secondary-fixed);
+  color: var(--color-on-secondary-fixed);
+}
+
+/* ─── Scrollbar Hiding Utility ─── */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Glassmorphism Utility ─── */
+.glassmorphism {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ─── Ambient Shadow Utility ─── */
+.ambient-shadow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Accordion Animation ─── */
+.accordion-content {
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+.accordion-content.open {
+  max-height: 500px;
+  padding-bottom: 1rem;
+}
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+/* ─── Drawer Overlay ─── */
+.drawer-overlay {
+  background-color: rgba(250, 249, 247, 0.8);
+  backdrop-filter: blur(12px);
 }
