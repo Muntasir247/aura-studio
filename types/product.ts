@@ -40,3 +40,19 @@ export interface Product {
   relatedProducts: string[];
   bundleWith?: string[];
 }
+
+export interface Collection {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  productIds: string[];
+}
+
+export interface Category {
+  id: string;
+  slug: string;
+  name: string;
+  subcategories: { id: string; slug: string; name: string }[];
+}
