@@ -58,8 +58,8 @@ export function TopNavBar() {
 
           {/* Trailing icons */}
           <div className="flex items-center gap-4 text-primary">
-            <button
-              onClick={() => open("quickView" as never)}
+            <Link
+              href="/wishlist"
               className="relative hover:opacity-70 transition-opacity duration-300 active:scale-95 transition-transform duration-200 p-2"
               aria-label={`Wishlist (${wishlistCount})`}
             >
@@ -71,7 +71,7 @@ export function TopNavBar() {
                   {wishlistCount}
                 </span>
               )}
-            </button>
+            </Link>
             <button
               onClick={() => open("cart")}
               className="relative hover:opacity-70 transition-opacity duration-300 active:scale-95 transition-transform duration-200 p-2"

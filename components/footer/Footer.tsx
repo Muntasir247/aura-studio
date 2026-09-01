@@ -11,12 +11,12 @@ const FOOTER_NAV = {
     { label: "Shipping", href: "/shipping-returns" },
     { label: "Returns", href: "/shipping-returns" },
     { label: "Contact", href: "/contact" },
-    { label: "FAQ", href: "/faq" },
+    { label: "About", href: "/about" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
-    { label: "Sustainability", href: "/sustainability" },
+    { label: "Wishlist", href: "/wishlist" },
   ],
 };
 
