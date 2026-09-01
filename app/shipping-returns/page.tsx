@@ -188,7 +188,7 @@ export default function ShippingReturnsPage() {
                       <span className="material-symbols-outlined text-[18px] text-primary mt-0.5">
                         check
                       </span>
-                      Return in original AURA packaging when possible
+                      Return in original THE VAULT packaging when possible
                     </li>
                   </ul>
                 </div>

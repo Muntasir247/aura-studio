@@ -117,16 +117,16 @@ export default function AboutPage() {
                   garments that feel as good as they look.
                 </p>
                 <p>
-                  The name AURA speaks to the invisible energy that a well-dressed person
-                  carries into a room. Our clothes are designed not to shout, but to radiate
-                  quiet authority.
+                  The name THE VAULT speaks to a sacred sanctuary of timeless style
+                  and uncompromising craftsmanship. Our clothes are designed not to shout,
+                  but to radiate quiet authority.
                 </p>
               </div>
             </div>
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1558171813-4c088753af8f?q=80&w=1200&auto=format&fit=crop"
-                alt="Tailor at work in AURA atelier"
+                alt="Tailor at work in The Vault atelier"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

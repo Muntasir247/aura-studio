@@ -83,7 +83,7 @@ export default function LookbookPage() {
       <section className="py-20 md:py-28 bg-surface-container-lowest border-b border-outline-variant/30 text-center">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <p className="font-label-caps text-xs text-on-surface-variant uppercase tracking-[0.25em] mb-4">
-            AURA STUDIO Editorial
+            THE VAULT Editorial
           </p>
           <h1 className="font-serif text-display-lg-mobile md:text-display-lg text-primary tracking-tight mb-6">
             The Autumn / Winter Edit

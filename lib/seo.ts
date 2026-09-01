@@ -133,7 +133,7 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    sameAs: ["https://instagram.com/aurastudio", "https://youtube.com/aurastudio"],
+    sameAs: ["https://instagram.com/thevault", "https://youtube.com/thevault"],
   };
 }
 

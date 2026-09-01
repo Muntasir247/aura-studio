@@ -13,7 +13,7 @@ const FOOTER_NAV = {
   Help: [
     { label: "Shipping & Returns", href: "/shipping-returns" },
     { label: "Contact Us", href: "/contact" },
-    { label: "About AURA", href: "/about" },
+    { label: "About THE VAULT", href: "/about" },
   ],
   Account: [
     { label: "Overview", href: "/account" },
@@ -38,14 +38,14 @@ export function Footer() {
               href="/"
               className="font-serif text-headline-md text-primary uppercase tracking-tight hover:opacity-70 transition-opacity font-bold"
             >
-              AURA STUDIO
+              THE VAULT
             </Link>
             <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
               Quiet luxury tailored for modern authority. Designed with sustainable virgin wool, pure mulberry silk, and Grade-A Mongolian cashmere.
             </p>
             <div className="flex flex-col gap-3">
               <p className="font-label-caps text-xs text-primary font-semibold">
-                Join the Studio Newsletter
+                Join The Vault Newsletter
               </p>
               <form className="flex border-b border-primary pb-2" onSubmit={(e) => e.preventDefault()}>
                 <input
@@ -92,7 +92,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="font-label-caps text-[10px] text-on-surface-variant">
-            &copy; 2026 AURA STUDIO. ALL RIGHTS RESERVED.
+            &copy; 2026 THE VAULT. ALL RIGHTS RESERVED.
           </span>
           <div className="flex gap-6 text-primary">
             <a href="#" className="hover:opacity-70 transition-opacity" aria-label="Instagram">

@@ -14,7 +14,7 @@ import {
 } from "@/reducers/cartReducer";
 
 const FREE_SHIPPING_THRESHOLD = 300;
-const STORAGE_KEY = "aura-cart";
+const STORAGE_KEY = "the-vault-cart";
 
 interface CartContextValue {
   state: CartState;

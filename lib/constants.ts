@@ -42,12 +42,13 @@ export const FOOTER_NAV = {
 } as const;
 
 export const PROMO_CODES: Record<string, number> = {
+  VAULT10: 10,
   AURA10: 10,
   WELCOME15: 15,
   VIP20: 20,
 };
 
 export const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com/aurastudio", icon: "photo_camera" },
-  { label: "YouTube", href: "https://youtube.com/aurastudio", icon: "play_circle" },
+  { label: "Instagram", href: "https://instagram.com/thevault", icon: "photo_camera" },
+  { label: "YouTube", href: "https://youtube.com/thevault", icon: "play_circle" },
 ] as const;

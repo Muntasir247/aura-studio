@@ -79,7 +79,7 @@ export function TopNavBar() {
             href="/"
             className="font-serif text-[22px] md:text-[24px] tracking-tight text-primary uppercase hover:opacity-80 transition-opacity duration-300 font-bold"
           >
-            AURA STUDIO
+            THE VAULT
           </Link>
 
           {/* Trailing icons */}

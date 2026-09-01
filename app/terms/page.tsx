@@ -161,8 +161,8 @@ export default function TermsPage() {
               <div className="flex flex-col gap-4">
                 <p>
                   All content on this website, including but not limited to text,
-                  graphics, logos, images, designs, and software, is the property of AURA
-                  STUDIO or its licensors and is protected by copyright, trademark, and
+                  graphics, logos, images, designs, and software, is the property of THE
+                  VAULT or its licensors and is protected by copyright, trademark, and
                   other intellectual property laws.
                 </p>
                 <p>

@@ -13,7 +13,7 @@ import {
   INITIAL_WISHLIST_STATE,
 } from "@/reducers/wishlistReducer";
 
-const STORAGE_KEY = "aura-wishlist";
+const STORAGE_KEY = "the-vault-wishlist";
 
 interface WishlistContextValue {
   state: WishlistState;

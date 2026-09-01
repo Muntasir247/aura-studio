@@ -17,13 +17,13 @@ const CONCIERGE_DETAILS = [
   {
     icon: "phone",
     label: "Phone",
-    value: "+1 (800) 555-AURA",
+    value: "+1 (800) 555-VAULT",
     note: "Mon–Fri, 9am–6pm EST",
   },
   {
     icon: "mail",
     label: "Email",
-    value: "concierge@aura-studio.com",
+    value: "concierge@thevault.com",
     note: "Response within 24 hours",
   },
   {
@@ -58,10 +58,10 @@ const FAQS = [
   {
     title: "Do you offer gift wrapping?",
     content:
-      "Every AURA STUDIO order arrives in our signature packaging: a matte obsidian box with embossed logo, archival tissue paper, and a reusable dust bag for accessories. Complimentary gift messaging is available at checkout.",
+      "Every THE VAULT order arrives in our signature packaging: a matte obsidian box with embossed logo, archival tissue paper, and a reusable dust bag for accessories. Complimentary gift messaging is available at checkout.",
   },
   {
-    title: "How do I care for my AURA pieces?",
+    title: "How do I care for my THE VAULT pieces?",
     content:
       "Each garment includes specific care instructions on its label. As a general rule: dry clean tailored pieces, hand wash silk and cashmere in cold water, and store knitwear folded (never hung) to preserve shape. We recommend cedar blocks for wool storage.",
   },

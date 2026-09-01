@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/Input";
 import { formatPrice } from "@/lib/utils";
 
 const PROMO_CODES: Record<string, number> = {
+  VAULT10: 10,
   AURA10: 10,
   WELCOME15: 15,
   VIP20: 20,
