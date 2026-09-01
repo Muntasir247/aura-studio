@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import { Providers } from "@/components/Providers";
+import { TopNavBar } from "@/components/nav/TopNavBar";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { Footer } from "@/components/footer/Footer";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -35,7 +38,12 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-surface text-on-surface font-sans antialiased overflow-x-hidden selection:bg-secondary-fixed selection:text-[#241a00]">
-        <Providers>{children}</Providers>
+        <Providers>
+          <TopNavBar />
+          <CartDrawer />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
