@@ -284,6 +284,8 @@ export default function CartPage() {
                 </p>
                 <div className="flex gap-2">
                   <input
+                    id="cart-promo-input"
+                    name="promoCode"
                     type="text"
                     value={promoInput}
                     onChange={(e) => {

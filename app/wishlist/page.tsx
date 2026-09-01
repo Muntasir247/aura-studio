@@ -94,7 +94,7 @@ export default function WishlistPage() {
                   {/* Remove button */}
                   <button
                     onClick={() => handleRemove(item.id)}
-                    className="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error transition-colors opacity-0 group-hover:opacity-100"
+                    className="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error transition-all shadow-sm opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
                     aria-label="Remove from wishlist"
                   >
                     <span className="material-symbols-outlined text-[18px]">
@@ -103,10 +103,10 @@ export default function WishlistPage() {
                   </button>
 
                   {/* Quick add overlay */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-[90%] sm:w-auto opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300">
                     <button
                       onClick={() => handleAddToCart(item)}
-                      className="bg-surface/90 text-primary font-button text-xs py-2 px-6 rounded-full hover:bg-primary hover:text-on-primary transition-colors"
+                      className="w-full sm:w-auto bg-surface/95 text-primary font-button text-xs py-2 px-6 rounded-full hover:bg-primary hover:text-white transition-colors shadow-sm"
                     >
                       Add to Bag
                     </button>

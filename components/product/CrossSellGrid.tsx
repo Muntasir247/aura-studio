@@ -38,10 +38,9 @@ export function CrossSellGrid({ productIds }: CrossSellGridProps) {
                   sizes="(max-width: 768px) 100vw, 25vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface/90 text-primary font-button text-xs py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  Quick Add
-                </button>
+                <span className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface/90 text-primary font-button text-xs py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 shadow-sm pointer-events-none">
+                  Quick View
+                </span>
               </div>
               <h3 className="font-label-caps text-label-caps text-primary mb-1">
                 {product.name}

@@ -81,22 +81,37 @@ function SearchForm() {
   const [localColors, setLocalColors] = useState<string[]>([]);
   const [localSizes, setLocalSizes] = useState<string[]>([]);
 
-  /* Live search: filter products as user types */
+  /* Live search: filter products as user types with relevance scoring */
   const results = useMemo(() => {
     let result = [...products];
 
     if (query.trim()) {
-      const q = query.toLowerCase();
-      result = result.filter(
-        (p) =>
-          p.name.toLowerCase().includes(q) ||
-          p.subtitle.toLowerCase().includes(q) ||
-          p.description.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q) ||
-          p.subcategory.toLowerCase().includes(q) ||
-          p.tags.some((t) => t.toLowerCase().includes(q)) ||
-          p.colors.some((c) => c.name.toLowerCase().includes(q))
-      );
+      const q = query.toLowerCase().trim();
+      const scored = result.map((p) => {
+        let score = 0;
+        const name = p.name.toLowerCase();
+        const subcategory = p.subcategory.toLowerCase();
+        const category = p.category.toLowerCase();
+        const tags = p.tags.map((t) => t.toLowerCase());
+        const colors = p.colors.map((c) => c.name.toLowerCase());
+
+        if (name === q) score += 20;
+        else if (name.startsWith(q)) score += 15;
+        else if (name.includes(q)) score += 10;
+
+        if (subcategory.includes(q)) score += 8;
+        if (category.includes(q)) score += 6;
+        if (tags.some((t) => t.includes(q))) score += 5;
+        if (colors.some((c) => c.includes(q))) score += 4;
+        if (p.subtitle.toLowerCase().includes(q)) score += 3;
+
+        return { product: p, score };
+      });
+
+      result = scored
+        .filter((item) => item.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map((item) => item.product);
     }
 
     if (localCategory) {
@@ -157,6 +172,8 @@ function SearchForm() {
               search
             </span>
             <input
+              id="search-main-input"
+              name="searchQuery"
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -188,7 +205,7 @@ function SearchForm() {
                 onClick={() => setLocalCategory(cat.value)}
                 className={`px-4 py-2 rounded-full font-label-caps text-label-caps border transition-colors ${
                   localCategory === cat.value
-                    ? "bg-primary text-on-primary border-primary"
+                    ? "bg-primary text-white border-primary"
                     : "border-outline-variant/50 text-on-surface-variant hover:border-primary hover:text-primary"
                 }`}
               >

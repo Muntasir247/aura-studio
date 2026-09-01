@@ -52,7 +52,7 @@ function checkoutReducer(state: CheckoutState, action: CheckoutAction): Checkout
 }
 
 const INITIAL_STATE: CheckoutState = {
-  step: "idle",
+  step: "shipping",
   shipping: INITIAL_SHIPPING,
   payment: INITIAL_PAYMENT,
   order: null,
@@ -428,6 +428,53 @@ export default function CheckoutPage() {
                 </p>
               </div>
             )}
+            {/* ── CONFIRMATION ── */}
+            {checkout.step === "confirmation" && checkout.order && (
+              <div className="flex flex-col gap-6 bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-8">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-[48px] text-primary">
+                    verified
+                  </span>
+                  <div>
+                    <h2 className="font-headline-sm text-headline-sm text-primary">
+                      Thank you for your order
+                    </h2>
+                    <p className="font-label-caps text-xs text-on-surface-variant">
+                      Order #{checkout.order.id}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="font-body-md text-on-surface-variant leading-relaxed">
+                  Your order has been placed successfully. A confirmation email has been sent to{" "}
+                  <span className="text-primary font-medium">{checkout.shipping.email || "your email"}</span>.
+                </p>
+
+                <div className="p-4 bg-surface-container-low rounded-lg flex flex-col gap-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-on-surface-variant">Shipping to:</span>
+                    <span className="text-primary font-medium text-right">
+                      {checkout.shipping.firstName} {checkout.shipping.lastName}, {checkout.shipping.city || "New York"}, {checkout.shipping.country || "United States"}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-on-surface-variant">Estimated Delivery:</span>
+                    <span className="text-primary font-medium">
+                      {checkout.order.estimatedDelivery}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-4 mt-2">
+                  <Link href="/collections">
+                    <Button variant="primary">Continue Shopping</Button>
+                  </Link>
+                  <Link href="/">
+                    <Button variant="secondary">Back to Home</Button>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right: Order summary sidebar */}
@@ -471,22 +518,28 @@ export default function CheckoutPage() {
               <div className="flex flex-col gap-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-on-surface-variant">Subtotal</span>
-                  <span className="text-primary font-medium">{formatPrice(subtotal)}</span>
+                  <span className="text-primary font-medium">
+                    {formatPrice(checkout.order?.subtotal ?? subtotal)}
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-on-surface-variant">Shipping</span>
                   <span className="text-primary font-medium">
-                    {shipping === 0 ? "Complimentary" : formatPrice(shipping)}
+                    {(checkout.order?.shipping ?? shipping) === 0
+                      ? "Complimentary"
+                      : formatPrice(checkout.order?.shipping ?? shipping)}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-on-surface-variant">Tax</span>
-                  <span className="text-primary font-medium">{formatPrice(tax)}</span>
+                  <span className="text-primary font-medium">
+                    {formatPrice(checkout.order?.tax ?? tax)}
+                  </span>
                 </div>
-                {cart.promoDiscount > 0 && (
+                {(checkout.order?.discount ?? cart.promoDiscount) > 0 && (
                   <div className="flex justify-between text-on-tertiary-container">
                     <span>Discount</span>
-                    <span>-{formatPrice(cart.promoDiscount)}</span>
+                    <span>-{formatPrice(checkout.order?.discount ?? cart.promoDiscount)}</span>
                   </div>
                 )}
                 <div className="h-px bg-outline-variant/30 my-2" />
@@ -520,33 +573,6 @@ export default function CheckoutPage() {
             </div>
           </div>
         </div>
-
-        {/* Confirmation full-width */}
-        {checkout.step === "confirmation" && checkout.order && (
-          <div className="mt-12 flex flex-col items-center gap-6 text-center">
-            <span className="material-symbols-outlined text-[72px] text-primary">
-              verified
-            </span>
-            <h2 className="font-headline-md text-headline-md text-primary">
-              Thank you for your order
-            </h2>
-            <p className="font-body-lg text-on-surface-variant max-w-lg">
-              Your order <span className="text-primary font-medium">{checkout.order.id}</span> has
-              been placed successfully. A confirmation email has been sent.
-            </p>
-            <p className="font-body-md text-on-surface-variant">
-              Estimated delivery: <span className="text-primary">{checkout.order.estimatedDelivery}</span>
-            </p>
-            <div className="flex gap-4 mt-4">
-              <Link href="/collections">
-                <Button variant="primary">Continue Shopping</Button>
-              </Link>
-              <Link href="/">
-                <Button variant="secondary">Back to Home</Button>
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { products } from "@/mock-data/products";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
@@ -18,6 +18,7 @@ import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
 
 export default function ProductPage() {
+  const router = useRouter();
   const params = useParams();
   const slug = params.slug as string;
 
@@ -256,27 +257,23 @@ export default function ProductPage() {
               >
                 {addedToBag ? "Added!" : inStock ? "Add to Bag" : "Sold Out"}
               </Button>
-              <div className="flex gap-3">
-                <Button variant="secondary" fullWidth className="py-3">
-                  Express Checkout
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="w-[50px]"
-                  onClick={handleWishlistToggle}
-                >
-                  <span
-                    className="material-symbols-outlined text-[20px]"
-                    style={
-                      wishlisted
-                        ? { fontVariationSettings: "'FILL' 1" }
-                        : undefined
-                    }
-                  >
-                    favorite_border
-                  </span>
-                </Button>
-              </div>
+              {!selectedSize && inStock && (
+                <p className="text-xs text-on-surface-variant/70 text-center font-body-md">
+                  Please select a size above to add to bag
+                </p>
+              )}
+              <Button
+                variant="secondary"
+                fullWidth
+                className="py-3"
+                disabled={!selectedSize || !inStock}
+                onClick={() => {
+                  handleAddToBag();
+                  router.push("/checkout");
+                }}
+              >
+                Express Checkout
+              </Button>
             </div>
 
             <div className="h-px bg-outline-variant/30 w-full mt-2" />

@@ -45,14 +45,14 @@ export function SizeGuide() {
           </div>
 
           {/* Table */}
-          <div className="overflow-x-auto -mx-6 px-6">
-            <table className="w-full text-left min-w-[480px]">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs sm:text-sm">
               <thead>
                 <tr className="border-b border-outline-variant/30">
                   {SIZE_DATA.headers.map((header) => (
                     <th
                       key={header}
-                      className="font-label-caps text-label-caps text-on-surface-variant py-3 pr-4 whitespace-nowrap"
+                      className="font-label-caps text-[10px] sm:text-label-caps text-on-surface-variant py-2.5 px-1 sm:px-2 whitespace-nowrap"
                     >
                       {header}
                     </th>
@@ -65,19 +65,19 @@ export function SizeGuide() {
                     key={row.label}
                     className="border-b border-outline-variant/10 hover:bg-surface-container-low/50 transition-colors"
                   >
-                    <td className="font-body-md text-primary font-medium py-3 pr-4">
+                    <td className="font-body-md text-primary font-medium py-2.5 px-1 sm:px-2">
                       {row.label}
                     </td>
-                    <td className="font-body-md text-on-surface-variant py-3 pr-4">
+                    <td className="font-body-md text-on-surface-variant py-2.5 px-1 sm:px-2">
                       {row.chest}
                     </td>
-                    <td className="font-body-md text-on-surface-variant py-3 pr-4">
+                    <td className="font-body-md text-on-surface-variant py-2.5 px-1 sm:px-2">
                       {row.waist}
                     </td>
-                    <td className="font-body-md text-on-surface-variant py-3 pr-4">
+                    <td className="font-body-md text-on-surface-variant py-2.5 px-1 sm:px-2">
                       {row.hips}
                     </td>
-                    <td className="font-body-md text-on-surface-variant py-3">
+                    <td className="font-body-md text-on-surface-variant py-2.5 px-1 sm:px-2">
                       {row.shoulder}
                     </td>
                   </tr>

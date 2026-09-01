@@ -36,7 +36,7 @@ export const QuantityStepper = forwardRef<HTMLDivElement, QuantityStepperProps>(
       <div
         ref={ref}
         className={cn(
-          "flex items-center border border-outline-variant/50 rounded-full bg-surface-container-lowest",
+          "inline-flex items-center w-fit border border-outline-variant/50 rounded-full bg-surface-container-lowest px-1 py-0.5",
           disabled && "opacity-50 pointer-events-none",
           className
         )}
@@ -50,7 +50,7 @@ export const QuantityStepper = forwardRef<HTMLDivElement, QuantityStepperProps>(
         >
           <span className="material-symbols-outlined text-[16px]">remove</span>
         </button>
-        <span className="font-button text-button w-4 text-center select-none">
+        <span className="font-body-md text-xs font-semibold px-2 min-w-[24px] text-center select-none text-primary">
           {value}
         </span>
         <button

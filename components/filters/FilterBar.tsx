@@ -16,24 +16,15 @@ const ALL_COLORS = [
   "Sand",
   "Slate",
   "Ivory",
-  "Champagne",
-  "Black",
   "Camel",
   "Oatmeal",
   "Heather Grey",
-  "Midnight",
-  "Charcoal",
-  "Cream",
-  "White",
-  "Sky Blue",
   "Navy",
+  "Charcoal",
+  "White",
   "Khaki",
   "Olive",
   "Cognac",
-  "Tan",
-  "Gold / Green",
-  "Silver / Blue",
-  "Matte Black",
 ];
 
 const ALL_COLORS_HEX: Record<string, string> = {
@@ -41,24 +32,15 @@ const ALL_COLORS_HEX: Record<string, string> = {
   Sand: "#d2b48c",
   Slate: "#708090",
   Ivory: "#fffff0",
-  Champagne: "#f7e7ce",
-  Black: "#000000",
   Camel: "#c19a6b",
   Oatmeal: "#d3c5a0",
   "Heather Grey": "#9e9e9e",
-  Midnight: "#191970",
-  Charcoal: "#36454f",
-  Cream: "#fffdd0",
-  White: "#ffffff",
-  "Sky Blue": "#87ceeb",
   Navy: "#000080",
+  Charcoal: "#36454f",
+  White: "#ffffff",
   Khaki: "#c3b091",
   Olive: "#556b2f",
   Cognac: "#834a25",
-  Tan: "#d2b48c",
-  "Gold / Green": "#c5a55a",
-  "Silver / Blue": "#a8b5c2",
-  "Matte Black": "#28282b",
 };
 
 const ALL_SIZES = ["XS", "S", "M", "L", "XL", "One Size"];
@@ -133,11 +115,12 @@ export function FilterBar() {
                 }
                 className={`w-7 h-7 rounded-full border transition-all duration-300 ${
                   state.colors.includes(color)
-                    ? "border-2 border-primary ring-1 ring-primary"
-                    : "border-outline-variant/50 hover:border-primary"
+                    ? "border-2 border-primary ring-1 ring-primary scale-110"
+                    : "border-outline-variant/50 hover:border-primary hover:scale-105"
                 }`}
                 style={{ backgroundColor: ALL_COLORS_HEX[color] }}
                 aria-label={color}
+                title={color}
               />
             ))}
           </div>

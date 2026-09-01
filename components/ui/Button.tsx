@@ -17,19 +17,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-on-primary rounded-full hover:bg-inverse-surface active:scale-[0.98] shadow-sm",
+    "bg-primary text-white hover:bg-neutral-800 active:scale-[0.98] shadow-sm",
   secondary:
-    "border border-outline-variant/50 text-primary bg-transparent rounded-full hover:bg-surface-variant/30 active:scale-[0.98]",
+    "border border-outline-variant/50 text-primary bg-transparent hover:bg-surface-variant/30 active:scale-[0.98]",
   ghost:
-    "bg-surface-container-lowest/20 backdrop-blur-sm border border-on-primary/30 text-on-primary rounded-full hover:bg-on-primary hover:text-primary",
+    "bg-surface-container-lowest/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black",
   text: "font-label-caps hover:opacity-70 border-b border-outline-variant pb-1 bg-transparent p-0 h-auto",
   icon: "w-10 h-10 rounded-full hover:bg-surface-variant/50 flex items-center justify-center bg-transparent p-0",
 };
 
 const sizeStyles: Record<Exclude<ButtonSize, "sm"> | "sm", string> = {
-  sm: "px-5 py-2.5 text-button",
-  md: "px-6 py-3 text-button",
-  lg: "px-8 py-4 text-button",
+  sm: "px-5 py-2.5 text-xs font-medium uppercase tracking-widest",
+  md: "px-6 py-3 text-xs font-medium uppercase tracking-widest",
+  lg: "px-8 py-4 text-sm font-medium uppercase tracking-widest",
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

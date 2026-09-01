@@ -33,13 +33,13 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1200&auto=format&fit=crop",
-        alt: "Structured oversized blazer in obsidian black on invisible mannequin",
+        src: "https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?q=80&w=1200&auto=format&fit=crop",
+        alt: "Structured oversized blazer in obsidian black tailored wool",
         isThumbnail: true,
       },
       {
-        src: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1200&auto=format&fit=crop",
-        alt: "Model wearing structured oversized blazer side angle",
+        src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop",
+        alt: "Model wearing structured oversized blazer editorial shot",
         isThumbnail: true,
       },
       {
@@ -87,8 +87,8 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200&auto=format&fit=crop",
-        alt: "Tailored wide-leg trouser in sand tone on hanger",
+        src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop",
+        alt: "Tailored wide-leg trouser in sand tone editorial",
         isThumbnail: true,
       },
       {
@@ -140,13 +140,13 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=1200&auto=format&fit=crop",
-        alt: "Silk camisole in ivory laid flat on minimal surface",
+        src: "https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?q=80&w=1200&auto=format&fit=crop",
+        alt: "Silk camisole in ivory pure mulberry silk drape",
         isThumbnail: true,
       },
       {
-        src: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop",
-        alt: "Model wearing silk camisole with blazer editorial",
+        src: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop",
+        alt: "Model wearing silk camisole styling editorial",
         isThumbnail: true,
       },
     ],
@@ -240,13 +240,13 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1200&auto=format&fit=crop",
-        alt: "Cashmere crewneck sweater in oatmeal folded neatly",
+        src: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1200&auto=format&fit=crop",
+        alt: "Cashmere crewneck sweater in minimal oatmeal tone",
         isThumbnail: true,
       },
       {
-        src: "https://images.unsplash.com/photo-1434389677669-e08b4cda3a75?q=80&w=1200&auto=format&fit=crop",
-        alt: "Model wearing cashmere sweater with relaxed fit",
+        src: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?q=80&w=1200&auto=format&fit=crop",
+        alt: "Model wearing cashmere sweater with relaxed drape",
         isThumbnail: true,
       },
     ],
@@ -286,7 +286,7 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1434389677669-e08b4cda3a75?q=80&w=1200&auto=format&fit=crop",
+        src: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1200&auto=format&fit=crop",
         alt: "Merino turtleneck in black on model",
         isThumbnail: true,
       },
@@ -481,8 +481,8 @@ export const products: Product[] = [
         isThumbnail: true,
       },
       {
-        src: "https://images.unsplash.com/photo-1590874103328-eac38ef6d88c?q=80&w=1200&auto=format&fit=crop",
-        alt: "Box bag interior showing suede lining",
+        src: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?q=80&w=1200&auto=format&fit=crop",
+        alt: "Box bag leather detail and silhouette",
         isThumbnail: false,
       },
     ],
@@ -524,12 +524,12 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1200&auto=format&fit=crop",
-        alt: "Minimalist leather belt in black coiled on surface",
+        src: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?q=80&w=1200&auto=format&fit=crop",
+        alt: "Minimalist leather belt in black and tan finish",
         isThumbnail: true,
       },
       {
-        src: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?q=80&w=1200&auto=format&fit=crop",
+        src: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1200&auto=format&fit=crop",
         alt: "Belt detail showing brushed silver buckle",
         isThumbnail: true,
       },
@@ -593,7 +593,7 @@ export const collections = [
     name: "New Arrivals",
     description: "The latest additions to The Vault edit.",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop",
     productIds: ["prod-001", "prod-002", "prod-004", "prod-006", "prod-010", "prod-012"],
   },
   {

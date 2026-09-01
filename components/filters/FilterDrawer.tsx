@@ -20,17 +20,35 @@ const SORT_OPTIONS = [
 ] as const;
 
 const ALL_COLORS = [
-  "Obsidian", "Sand", "Slate", "Ivory", "Champagne", "Black",
-  "Camel", "Oatmeal", "Heather Grey", "Midnight", "Charcoal", "Cream",
-  "White", "Sky Blue", "Navy", "Khaki", "Olive", "Cognac", "Tan",
+  "Obsidian",
+  "Sand",
+  "Slate",
+  "Ivory",
+  "Camel",
+  "Oatmeal",
+  "Heather Grey",
+  "Navy",
+  "Charcoal",
+  "White",
+  "Khaki",
+  "Olive",
+  "Cognac",
 ];
 
 const ALL_COLORS_HEX: Record<string, string> = {
-  Obsidian: "#000000", Sand: "#d2b48c", Slate: "#708090", Ivory: "#fffff0",
-  Champagne: "#f7e7ce", Black: "#000000", Camel: "#c19a6b", Oatmeal: "#d3c5a0",
-  "Heather Grey": "#9e9e9e", Midnight: "#191970", Charcoal: "#36454f",
-  Cream: "#fffdd0", White: "#ffffff", "Sky Blue": "#87ceeb", Navy: "#000080",
-  Khaki: "#c3b091", Olive: "#556b2f", Cognac: "#834a25", Tan: "#d2b48c",
+  Obsidian: "#000000",
+  Sand: "#d2b48c",
+  Slate: "#708090",
+  Ivory: "#fffff0",
+  Camel: "#c19a6b",
+  Oatmeal: "#d3c5a0",
+  "Heather Grey": "#9e9e9e",
+  Navy: "#000080",
+  Charcoal: "#36454f",
+  White: "#ffffff",
+  Khaki: "#c3b091",
+  Olive: "#556b2f",
+  Cognac: "#834a25",
 };
 
 const ALL_SIZES = ["XS", "S", "M", "L", "XL", "One Size"];
@@ -111,11 +129,12 @@ export function FilterDrawer() {
                   }
                   className={`w-8 h-8 rounded-full border transition-all duration-300 ${
                     state.colors.includes(color)
-                      ? "border-2 border-primary ring-1 ring-primary"
-                      : "border-outline-variant/50 hover:border-primary"
+                      ? "border-2 border-primary ring-1 ring-primary scale-110"
+                      : "border-outline-variant/50 hover:border-primary hover:scale-105"
                   }`}
                   style={{ backgroundColor: ALL_COLORS_HEX[color] }}
                   aria-label={color}
+                  title={color}
                 />
               ))}
             </div>

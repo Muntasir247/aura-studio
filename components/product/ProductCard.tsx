@@ -21,7 +21,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Link href={`/product/${product.slug}`} className="group cursor-pointer block">
-      <div className="relative overflow-hidden mb-4 aspect-[3/4]">
+      <div className="relative overflow-hidden mb-4 aspect-[3/4] bg-surface-container-low rounded">
         {/* Badges */}
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
           {hasNewTag && (
