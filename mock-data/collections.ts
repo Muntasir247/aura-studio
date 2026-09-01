@@ -5,7 +5,7 @@ export const collections: Collection[] = [
     id: "col-001",
     slug: "new-arrivals",
     name: "New Arrivals",
-    description: "The latest additions to the AURA STUDIO edit.",
+    description: "The latest additions to The Vault edit.",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1200&auto=format&fit=crop",
     productIds: ["prod-001", "prod-002", "prod-004", "prod-006", "prod-010", "prod-012"],

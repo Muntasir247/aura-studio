@@ -35,7 +35,7 @@ const BANNERS: Record<string, { headline: string; subline: string; image: string
   },
   "new-arrivals": {
     headline: "New Arrivals",
-    subline: "The latest additions to the AURA STUDIO edit.",
+    subline: "The latest additions to The Vault edit.",
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1600&auto=format&fit=crop",
   },

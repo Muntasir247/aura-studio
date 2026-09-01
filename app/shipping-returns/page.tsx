@@ -241,7 +241,7 @@ export default function ShippingReturnsPage() {
               </h2>
               <div className="flex flex-col gap-6 font-body-md text-on-surface-variant leading-relaxed">
                 <p>
-                  Each AURA STUDIO garment is crafted from premium materials and deserves
+                  Each Vault garment is crafted from premium materials and deserves
                   proper care to preserve its beauty and longevity. Specific care
                   instructions are found on the garment label.
                 </p>

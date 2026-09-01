@@ -1,8 +1,8 @@
-export const SITE_NAME = "AURA STUDIO";
+export const SITE_NAME = "The Vault";
 export const SITE_TAGLINE = "Modern Luxury Fashion";
 export const SITE_DESCRIPTION =
-  "AURA STUDIO — Defining modern silhouettes. Discover curated collections of luxury fashion for men and women.";
-export const SITE_URL = "https://aurastudio.com";
+  "The Vault — Defining modern silhouettes. Discover curated collections of luxury fashion for men and women.";
+export const SITE_URL = "https://thevault.com";
 
 export const FREE_SHIPPING_THRESHOLD = 300;
 export const STANDARD_SHIPPING_COST = 25;

@@ -17,13 +17,13 @@ const CONCIERGE_DETAILS = [
   {
     icon: "phone",
     label: "Phone",
-    value: "+1 (800) 555-AURA",
+    value: "+880 1878927350",
     note: "Mon–Fri, 9am–6pm EST",
   },
   {
     icon: "mail",
     label: "Email",
-    value: "concierge@aurastudio.com",
+    value: "adormuntasir@gmail.com",
     note: "Response within 24 hours",
   },
   {
@@ -58,7 +58,7 @@ const FAQS = [
   {
     title: "Do you offer gift wrapping?",
     content:
-      "Every AURA STUDIO order arrives in our signature packaging: a matte black box with embossed logo, tissue paper, and a reusable dust bag for accessories. Complimentary gift messaging is available at checkout.",
+      "Every Vault order arrives in our signature packaging: a matte black box with embossed logo, tissue paper, and a reusable dust bag for accessories. Complimentary gift messaging is available at checkout.",
   },
   {
     title: "How do I care for my AURA pieces?",

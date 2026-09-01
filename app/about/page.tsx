@@ -75,7 +75,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1600&auto=format&fit=crop"
-          alt="AURA STUDIO atelier"
+          alt="The Vault atelier"
           fill
           sizes="100vw"
           className="object-cover"
@@ -105,7 +105,7 @@ export default function AboutPage() {
               </h2>
               <div className="flex flex-col gap-4 font-body-lg text-on-surface-variant leading-relaxed">
                 <p>
-                  AURA STUDIO was founded with a singular vision: to create clothing that
+                  The Vault was founded with a singular vision: to create clothing that
                   empowers the modern individual through impeccable tailoring, considered
                   materials, and a design language rooted in architectural minimalism.
                 </p>
@@ -257,7 +257,7 @@ export default function AboutPage() {
             &ldquo;Luxury is not about being noticed. It is about being remembered.&rdquo;
           </blockquote>
           <p className="font-label-caps text-label-caps mt-8 opacity-70">
-            — AURA STUDIO
+            — The Vault
           </p>
         </div>
       </section>

@@ -20,9 +20,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AURA STUDIO | Modern Luxury Fashion",
+  title: "The Vault | Modern Luxury Fashion",
   description:
-    "AURA STUDIO — Defining modern silhouettes. Discover curated collections of luxury fashion for men and women.",
+    "The Vault — Defining modern silhouettes. Discover curated collections of luxury fashion for men and women.",
 };
 
 export default function RootLayout({

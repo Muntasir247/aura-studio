@@ -8,7 +8,7 @@ const MOCK_USER = {
   firstName: "Alexandra",
   lastName: "Sterling",
   email: "alex@studioclient.com",
-  phone: "+1 (555) 012-3456",
+  phone: "+880 1878927350",
   memberSince: "January 2024",
   tier: "Obsidian",
 };

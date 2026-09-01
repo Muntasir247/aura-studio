@@ -89,7 +89,7 @@ export default function TermsPage() {
               </h2>
               <div className="flex flex-col gap-4">
                 <p>
-                  By accessing or using the AURA STUDIO website (aurastudio.com) and
+                  By accessing or using The Vault website (thevault.com) and
                   related services, you agree to be bound by these Terms of Service. If
                   you do not agree, please do not use our services.
                 </p>
@@ -179,7 +179,7 @@ export default function TermsPage() {
               </h2>
               <div className="flex flex-col gap-4">
                 <p>
-                  To the maximum extent permitted by law, AURA STUDIO shall not be liable
+                  To the maximum extent permitted by law, The Vault shall not be liable
                   for any indirect, incidental, special, consequential, or punitive
                   damages arising from your use of our services or products.
                 </p>

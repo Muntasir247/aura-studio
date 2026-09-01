@@ -276,9 +276,9 @@ export default function PrivacyPage() {
                 </p>
                 <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-6">
                   <p className="font-body-md text-primary font-medium">
-                    AURA STUDIO Privacy Team
+                    The Vault Privacy Team
                   </p>
-                  <p>privacy@aurastudio.com</p>
+                  <p>adormuntasir@gmail.com</p>
                   <p>550 Fifth Avenue, Suite 4200</p>
                   <p>New York, NY 10036</p>
                 </div>

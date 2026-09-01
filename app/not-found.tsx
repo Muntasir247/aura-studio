@@ -12,7 +12,7 @@ export default function NotFound() {
         <div className="flex-1 relative w-full min-h-[400px]">
           <Image
             src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop"
-            alt="AURA STUDIO boutique"
+            alt="The Vault boutique"
             fill
             sizes="100vw"
             className="object-cover opacity-30"

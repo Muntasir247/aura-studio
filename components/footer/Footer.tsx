@@ -31,7 +31,7 @@ export function Footer() {
               href="/"
               className="font-serif text-headline-md text-primary uppercase tracking-tighter hover:opacity-70 transition-opacity"
             >
-              AURA STUDIO
+              THE VAULT
             </Link>
             <div className="flex flex-col gap-4">
               <p className="font-label-caps text-label-caps text-primary">
@@ -82,7 +82,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="font-label-caps text-[10px] text-on-surface-variant">
-            &copy; 2024 AURA STUDIO. ALL RIGHTS RESERVED.
+            &copy; 2024 The Vault. ALL RIGHTS RESERVED.
           </span>
           <div className="flex gap-6">
             <a href="#" className="hover:opacity-70 transition-opacity" aria-label="Instagram">

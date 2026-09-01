@@ -16,7 +16,7 @@ const MOCK_ADDRESSES = [
     state: "NY",
     zip: "10021",
     country: "United States",
-    phone: "+1 (555) 012-3456",
+    phone: "+880 1878927350",
     isDefault: true,
   },
   {
@@ -28,7 +28,7 @@ const MOCK_ADDRESSES = [
     state: "NY",
     zip: "10036",
     country: "United States",
-    phone: "+1 (555) 987-6543",
+    phone: "+880 1878927350",
     isDefault: false,
   },
 ];

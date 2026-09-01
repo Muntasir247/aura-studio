@@ -7,11 +7,10 @@ import { useWishlist } from "@/hooks/useWishlist";
 import { useDrawer } from "@/hooks/useDrawer";
 
 const NAV_LINKS = [
-  { label: "New In", href: "/collections/new-arrivals" },
-  { label: "Collections", href: "/collections" },
-  { label: "Lookbook", href: "/lookbook" },
-  { label: "Studio", href: "/about" },
-  { label: "Journal", href: "/journal" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Products", href: "/collections" },
 ];
 
 export function TopNavBar() {
@@ -53,11 +52,20 @@ export function TopNavBar() {
             href="/"
             className="font-serif text-[24px] md:text-[24px] tracking-tighter text-primary uppercase hover:opacity-70 transition-opacity duration-300"
           >
-            AURA STUDIO
+            THE VAULT
           </Link>
 
           {/* Trailing icons */}
           <div className="flex items-center gap-4 text-primary">
+            <Link
+              href="/account"
+              className="hover:opacity-70 transition-opacity duration-300 active:scale-95 transition-transform duration-200 p-2"
+              aria-label="Account"
+            >
+              <span className="material-symbols-outlined text-[24px]">
+                person
+              </span>
+            </Link>
             <Link
               href="/wishlist"
               className="relative hover:opacity-70 transition-opacity duration-300 active:scale-95 transition-transform duration-200 p-2"
